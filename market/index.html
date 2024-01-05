@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website E-Commerce</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+    <header>
+        <div class="cart">
+            <a href="checkout"><i class="ph ph-shopping-cart"></i></a>
+        </div>
+        <img src="/images/branding/nav_logo.png" alt="">
+        <div class="logout">
+            <a href="/"><i class="ph ph-sign-out"></i></a>
+        </div>
+    </header>
+    <section id="product">
+        <div v-for="(item, index) in list" :key="index" class="product">
+            <img :src="item.image" :alt="item.name">
+            <h2>{{ item.name }}</h2>
+            <p>{{ item.desc }}</p>
+            <p>Price: Rp{{ item.price }}</p>
+            <button @click="addToCart(item)" style="margin-top: 10px; padding: 10px 20px;">Add to Cart</button>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2023 Website E-Commerce. All rights reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="/script.js"></script>
+
+</body>
+
+</html>

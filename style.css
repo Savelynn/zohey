@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --accent: #efb74a;
+}
+
+*, html, body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Warna latar belakang yang lebih bersih */
+    position: relative;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: #ffffff;
+    height: 70px;
+    padding: 10px;
+    text-align: center;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 5px 44px -9px rgba(0,0,0,0.34);
+    -webkit-box-shadow: 0px 5px 44px -9px rgba(0,0,0,0.34);
+    -moz-box-shadow: 0px 5px 44px -9px rgba(0,0,0,0.34);
+}
+
+nav img{
+    transform: translateY(3px);
+    width: 170px;    
+}
+
+.nav-wrap {
+    margin: 0px 250px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-R {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link a {
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    color: #000000;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.nav-link a:hover {
+    color: var(--accent);
+    transform: scale(120%);
+}
+
+.login-btn {
+    border: solid 1px black;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    margin-left: 30px;
+    /* Efek transisi warna latar belakang */
+}
+
+.login-btn:hover {
+    border: solid 1px var(--accent);
+    background-color: var(--accent);
+    color: #fff;
+}
+
+.blank {
+    height: 30vh;
+    background-color: #434343;
+}
+
+#home {
+    background-color: var(--accent);
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+    width: calc(30% - 20px);
+    position: relative;
+}
+
+.start h3 {
+    font-size: 54px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.start p {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.start-button button {
+    margin-top: 20px;
+    border: 0;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.start-button button:hover {
+    background-color: var(--accent);
+    color: white;
+    transform: scale(140%);
+}
+
+.start-button {
+    align-self: self-start;
+}
+
+.start:last-child {
+    align-items: end;
+}
+
+.start img {
+    max-width: 500px;
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 50%;
+}
+
+/* ABOUT US */
+
+#about {
+    height: 60vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-content {
+    transform: translateY(-30px);
+    margin: auto;
+    width: 90%;
+    position: relative;
+}
+
+.about-header {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.about-header h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 230px;
+}
+
+.about-content h1:last-child {
+    transform: translateY(-120px);
+}
+
+.about-us {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    width: 40%;
+    transform: translateY(-420px) translateX(370px);
+}
+
+.about-box {
+    background-color: #9E7E3F;
+    right: 0;
+    position: absolute;
+    width: 700px;
+    height: 1000px;
+    transform: skewX(10deg) translateX(100px);
+}
+
+/* TESTIMONIAL */
+
+#testimonial {
+    background-color: var(--accent);
+    min-height: 100vh;
+
+}
+
+.testi-content {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.testimonial-title {
+    display: block;
+    margin-top: 100px;
+}
+
+.testimonial-title h1 {
+    font-size: 64px;
+}
+
+.testi {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.testi-card {
+    background-color: white;
+    border-radius: 10px;
+    width: 400px;
+    padding: 30px;
+    margin: 30px 30px;
+    /* box-shadow: ; */
+}
+
+.tc-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.tc-img img{
+    border-radius: 50%;
+    width: 60px;
+}
+
+.tc-bot {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.tc-feedback {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.tc-rating i{
+    color: #FFD700;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+/* market css */
+
+header {
+    padding: 30px 100px;
+    background-color: #343a40;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    position: relative;
+
+}
+header .cart {
+    position: absolute;
+    top: calc(50% - 25px);
+}
+
+header .logout {
+    position: absolute;
+    top: calc(50% - 25px);
+    right: 5%;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+header img {
+    width: 400px;
+}
+
+#product {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    /* Memastikan tinggi item sejajar */
+    padding: 20px;
+}
+
+
+.product {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 10px;
+    padding: 20px;
+    text-align: center;
+    width: calc(45% - 20px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product button {
+    border: 0;
+    background-color: var(--accent);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #343a40; /* Warna footer yang lebih gelap */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* ANIMATION */
+
+@keyframes floating {
+    0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
